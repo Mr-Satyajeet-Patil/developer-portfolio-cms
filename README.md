@@ -230,8 +230,14 @@ Add these environment variables:
 | -------------------- | ---------------------------------------- |
 | `DJANGO_SECRET_KEY`  | a long random string (Render can generate it) |
 | `DATABASE_URL`       | the Neon connection string               |
+| `NODE_VERSION`       | `22.17.1` (required by the locked Vite/Rolldown toolchain) |
 | `DEBUG`              | `False`                                  |
 | `ALLOWED_HOSTS`      | `.onrender.com`                          |
+
+Outbound email is not used by the contact form (messages are stored in the
+database). If you enable email features, configure `EMAIL_HOST`,
+`EMAIL_HOST_USER`, `EMAIL_HOST_PASSWORD`, and optionally `EMAIL_PORT` and
+`EMAIL_USE_TLS` in Render.
 
 The build runs `build.sh`, which installs dependencies, builds the React app,
 collects static files, applies migrations and loads the bundled portfolio

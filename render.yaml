@@ -12,6 +12,7 @@ services:
   - type: web
     name: my-portfolio
     runtime: python
+    branch: backend
     plan: free
     region: singapore
     buildCommand: bash build.sh
@@ -21,6 +22,8 @@ services:
         generateValue: true
       - key: DATABASE_URL
         sync: false
+      - key: NODE_VERSION
+        value: "22.17.1"
       - key: DEBUG
         value: "False"
       - key: ALLOWED_HOSTS
