@@ -1,0 +1,2 @@
+# Keep shell scripts LF so they run on Linux hosts.
+*.sh text eol=lf

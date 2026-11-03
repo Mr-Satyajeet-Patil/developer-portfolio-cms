@@ -1,0 +1,4 @@
+# Local development extras (MySQL support).
+# Production installs only backend/requirements.txt.
+-r requirements.txt
+mysqlclient==2.3.0

@@ -15,7 +15,14 @@ venv/
 
 # Django
 db.sqlite3
-media/
+# Uploaded media is generated, except the portrait that ships with the site.
+backend/media/*
+!backend/media/profile/
+backend/media/profile/*
+!backend/media/profile/*.jpg
+!backend/media/profile/*.jpeg
+!backend/media/profile/*.png
+!backend/media/profile/*.webp
 staticfiles/
 *.sql
 
